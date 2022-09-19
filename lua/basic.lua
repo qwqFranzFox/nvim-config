@@ -1,0 +1,5 @@
+require("plugins")
+require("config/nvim-tree")
+require("config/bufferline")
+require("config/treesitter")
+require("config/which-key")

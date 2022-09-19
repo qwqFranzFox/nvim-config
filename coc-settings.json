@@ -1,0 +1,29 @@
+{
+  "rust-analyzer.enable": true,
+  "rust-analyzer.server.path": "/bin/rust-analyzer",
+  "rust-analyzer.lens.enable": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "codeLens.enable": true,
+  "diagnostic.showUnused": true,
+  "diagnostic.virtualTextCurrentLineOnly": true,
+  "clangd.arguments": [
+    "--background-index",
+    "-j=8",
+    "--clang-tidy",
+    "--clang-tidy-checks=performance-*,bugprone-*portability-*,modernize-*",
+    "--all-scopes-completion",
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--pch-storage=disk",
+    "--cross-file-rename"
+  ],
+  "highlight.colors.enable": true,
+  "highlight.document.enable": true,
+  "highlight.colorNames.enable": true,
+  "pairs.enableBackspace": true,
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "pairs.alwaysPairCharacters": [],
+  "Lua.format.enable": true,
+  "stylua.styluaPath": "/bin/stylua",
+  "Lua.telemetry.enable": true
+}
