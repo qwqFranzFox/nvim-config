@@ -1,7 +1,3 @@
-" - Pre-Config with lua
-lua require("basic")
-nnoremap <leader>p :vsplit ~/.config/nvim/lua/plugins.lua<CR>
-
 " - Interface
 
 " Language
@@ -23,7 +19,7 @@ set ruler
 set laststatus=2
 " Colorscheme
 "colorscheme nord
-colorscheme typewriter
+colorscheme base16-grayscale-light
 " Background
 set background=light
 " True Colors
@@ -298,12 +294,32 @@ set timeoutlen=200
 
 " lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'typewriter_dark',
+      \ 'colorscheme': 'typewriter_light',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \   'left': [ [ 'mode'],[ 'relativepath' ,'filetype',],
+      \             [ 'gitbranch', 'readonly',], ['modified' ] ],
+      \   'right': [['percent','lineinfo'],[ 'time']],
       \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
+      \ 'component_function':{'time':'LightlineGetTime',}
       \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'typewriter_light',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'relativepath' ,'filetype',],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+"       \ },
+"       \ }
+"
+"
+let g:lightline.separator = { 'left': '', 'right': ''}
+let g:lightline.subseparator = { 'left': '', 'right': ''}
+
+function! LightlineGetTime()
+  return "⌚" . strftime('%H:%M')
+endfunction
+
+
+" Plugins
+lua require("basic")
+nnoremap <leader>p :vsplit ~/.config/nvim/lua/plugins.lua<CR>
+
