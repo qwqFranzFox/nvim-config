@@ -80,6 +80,16 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "git@github.com:numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "git@github.com:L3MON4D3/LuaSnip"
+  },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "git@github.com:LunarWatcher/auto-pairs"
+  },
   ["base16-vim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/base16-vim",
@@ -110,20 +120,20 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "git@github.com:hrsh7th/cmp-path"
   },
-  ["cmp-vsnip"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "git@github.com:hrsh7th/cmp-vsnip"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "git@github.com:saadparwaiz1/cmp_luasnip"
   },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/formatter.nvim",
     url = "git@github.com:mhartington/formatter.nvim"
   },
-  ["friendly-snippets"] = {
+  ["lightline-onedark"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "git@github.com:rafamadriz/friendly-snippets"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lightline-onedark",
+    url = "git@github.com:hallzy/lightline-onedark"
   },
   ["lightline.vim"] = {
     loaded = true,
@@ -160,11 +170,6 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "git@github.com:norcalli/nvim-colorizer.lua"
   },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "git@github.com:williamboman/nvim-lsp-installer"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -185,6 +190,11 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "git@github.com:kyazdani42/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "git@github.com:navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -194,11 +204,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
-  },
-  ["surround.nvim"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/surround.nvim",
-    url = "git@github.com:ur4ltz/surround.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -214,11 +219,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/vim-archery",
     url = "git@github.com:badacadabra/vim-archery"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "git@github.com:hrsh7th/vim-vsnip"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },

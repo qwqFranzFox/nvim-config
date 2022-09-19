@@ -5,49 +5,48 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd("packadd packer.nvim")
 end
 
-require("packer").init({
+require "packer".init({
   git = { default_url_format = "git@github.com:%s" },
 })
 
-return require("packer").startup(function()
-  use({ "wbthomason/packer.nvim" })
+return require "packer".startup(function()
+  use { "wbthomason/packer.nvim" }
 
   -- Fuzzy Finder
-  use({ "nvim-telescope/telescope.nvim", requires = "nvim-lua/plenary.nvim" })
+  use { "nvim-telescope/telescope.nvim", requires = "nvim-lua/plenary.nvim" }
   -- Language Server Client
   -- lspconfig
-  use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
-  -- nvim-cmp
-  use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-  use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-  use("hrsh7th/cmp-path") -- { name = 'path' }
-  use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
-  use("hrsh7th/nvim-cmp")
-  -- vsnip
-  use("hrsh7th/cmp-vsnip") -- { name = 'vsnip' }
-  use("hrsh7th/vim-vsnip")
-  use("rafamadriz/friendly-snippets")
-  -- lspkind
-  use("onsails/lspkind-nvim")
+  use "neovim/nvim-lspconfig"
+  use "hrsh7th/nvim-cmp" -- Autocompletion plugin
+  use "hrsh7th/cmp-nvim-lsp" -- LSP source for nvim-cmp
+  use "hrsh7th/cmp-buffer" -- { name = "buffer" },
+  use "hrsh7th/cmp-path" -- { name = "path" }
+  use "hrsh7th/cmp-cmdline" -- { name = "cmdline" }
+  -- Snippets plugin
+  use "saadparwaiz1/cmp_luasnip" -- Snippets source for nvim-cmp
+  use "L3MON4D3/LuaSnip"
+  use "onsails/lspkind-nvim"
   -- Code Format
-  use("mhartington/formatter.nvim")
+  use "mhartington/formatter.nvim"
 
   -- Color Scheme
-  use("logico/typewriter-vim")
-  use("yorik1984/newpaper.nvim")
-  use("chriskempson/base16-vim")
-  use("shaunsingh/nord.nvim")
-  use("badacadabra/vim-archery")
-  use("marko-cerovac/material.nvim")
+  use "logico/typewriter-vim"
+  use "yorik1984/newpaper.nvim"
+  use "chriskempson/base16-vim"
+  use "shaunsingh/nord.nvim"
+  use "badacadabra/vim-archery"
+  use "marko-cerovac/material.nvim"
+  use "navarasu/onedark.nvim"
 
   -- Airline Status Line
-  use("itchyny/lightline.vim")
+  use "itchyny/lightline.vim"
+  use "hallzy/lightline-onedark"
 
   -- NvimTree
-  use({
+  use {
     "kyazdani42/nvim-tree.lua",
     requires = "kyazdani42/nvim-web-devicons",
-  })
+  }
 
   -- bufferline (新增)
   use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
@@ -71,5 +70,5 @@ return require("packer").startup(function()
   })
 
   -- Surround
-  use("ur4ltz/surround.nvim")
+  use("LunarWatcher/auto-pairs")
 end)

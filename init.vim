@@ -18,10 +18,9 @@ set ruler
 " Always Status Bar
 set laststatus=2
 " Colorscheme
-"colorscheme nord
-colorscheme base16-grayscale-light
+colorscheme onedark
 " Background
-set background=light
+set background=dark
 " True Colors
 set tgc
 " More settings
@@ -96,7 +95,7 @@ endif
 " Ctrl-Y
 noremap <silent><C-y> :later<cr>
 " Format
-" nnoremap <silent><leader><leader> :Format<cr>
+nnoremap <silent><leader><leader> :Format<cr>
 " Compile
 nnoremap <leader>r :!clang++ % -o %< --std=c++14 -g -Wall -Wextra<CR>
 " Terminal
@@ -108,6 +107,10 @@ nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>b<Left> :bp<CR>
 nnoremap <leader>b<Right> :bn<CR>
+
+" Plugins
+lua require("basic")
+nnoremap <leader>p :vsplit ~/.config/nvim/lua/plugins.lua<CR>
 
 
 " Telescope.vim
@@ -139,7 +142,7 @@ set timeoutlen=200
 
 " lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'typewriter_light',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode'],[ 'relativepath' ,'filetype',],
       \             [ 'gitbranch', 'readonly',], ['modified' ] ],
@@ -162,9 +165,3 @@ let g:lightline.subseparator = { 'left': '', 'right': ''}
 function! LightlineGetTime()
   return "⌚" . strftime('%H:%M')
 endfunction
-
-
-" Plugins
-lua require("basic")
-nnoremap <leader>p :vsplit ~/.config/nvim/lua/plugins.lua<CR>
-
