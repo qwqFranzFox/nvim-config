@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "git@github.com:numToStr/Comment.nvim"
+  },
   ["base16-vim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/base16-vim",
@@ -84,30 +90,55 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "git@github.com:akinsho/bufferline.nvim"
   },
-  ["coc.nvim"] = {
+  ["cmp-buffer"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "git@github.com:neoclide/coc.nvim"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "git@github.com:hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "git@github.com:hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "git@github.com:hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "git@github.com:hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "git@github.com:hrsh7th/cmp-vsnip"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "git@github.com:mhartington/formatter.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "git@github.com:rafamadriz/friendly-snippets"
   },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lightline.vim",
     url = "git@github.com:itchyny/lightline.vim"
   },
+  ["lspkind-nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "git@github.com:onsails/lspkind-nvim"
+  },
   ["material.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "git@github.com:marko-cerovac/material.nvim"
-  },
-  neoformat = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/neoformat",
-    url = "git@github.com:sbdchd/neoformat"
-  },
-  nerdcommenter = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nerdcommenter",
-    url = "git@github.com:preservim/nerdcommenter"
   },
   ["newpaper.nvim"] = {
     loaded = true,
@@ -119,10 +150,25 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "git@github.com:shaunsingh/nord.nvim"
   },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "git@github.com:hrsh7th/nvim-cmp"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "git@github.com:norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "git@github.com:williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "git@github.com:neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -149,6 +195,11 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
   },
+  ["surround.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/surround.nvim",
+    url = "git@github.com:ur4ltz/surround.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -164,6 +215,11 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/vim-archery",
     url = "git@github.com:badacadabra/vim-archery"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "git@github.com:hrsh7th/vim-vsnip"
+  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
@@ -173,6 +229,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "which-key.nvim")
