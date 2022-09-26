@@ -18,13 +18,14 @@ set ruler
 " Always Status Bar
 set laststatus=2
 " Colorscheme
-colorscheme onedark
+colorscheme newpaper
 " Background
-set background=dark
+set background=light
 " True Colors
 set tgc
 " More settings
-" ...
+" Always Sign Column
+set signcolumn=yes
 
 " - Better Editing
 
@@ -135,6 +136,7 @@ if exists("g:neovide")
   let g:neovide_fullscreen=v:false
   let g:neovide_profiler = v:false
   let g:neovide_cursor_vfx_mode = "wireframe"
+  let g:neovide_hide_mouse_when_typing = v:true
 endif
 
 " Which-key.nvim
@@ -142,13 +144,14 @@ set timeoutlen=200
 
 " lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'enable':{'tabline':0},
+      \ 'colorscheme': 'base16',
       \ 'active': {
       \   'left': [ [ 'mode'],[ 'relativepath' ,'filetype',],
       \             [ 'gitbranch', 'readonly',], ['modified' ] ],
       \   'right': [['percent','lineinfo'],[ 'time']],
       \ },
-      \ 'component_function':{'time':'LightlineGetTime',}
+      \ 'component_function':{'time':'GetTime',}
       \ }
 " let g:lightline = {
 "       \ 'colorscheme': 'typewriter_light',
@@ -162,6 +165,13 @@ let g:lightline = {
 let g:lightline.separator = { 'left': '', 'right': ''}
 let g:lightline.subseparator = { 'left': '', 'right': ''}
 
-function! LightlineGetTime()
+function! GetTime()
   return "⌚" . strftime('%H:%M')
 endfunction
+
+" let g:AutoPairsFlyMode=1
+
+" Vim-Tex
+let g:vimtex_view_method = 'zathura'
+let maplocalleader = " "
+

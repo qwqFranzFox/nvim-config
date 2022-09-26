@@ -1,5 +1,6 @@
-local luasnip = require "luasnip"
+local luasnip = require("luasnip")
 
--- More snippets
+-- snippets
+luasnip.loaders.from_vscode.lazy_load()
 
-return luasnip;
+return luasnip

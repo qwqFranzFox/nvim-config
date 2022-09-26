@@ -75,7 +75,6 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["Comment.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "git@github.com:numToStr/Comment.nvim"
@@ -85,15 +84,10 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "git@github.com:L3MON4D3/LuaSnip"
   },
-  ["auto-pairs"] = {
+  ["ariake-vim-colors"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/auto-pairs",
-    url = "git@github.com:LunarWatcher/auto-pairs"
-  },
-  ["base16-vim"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/base16-vim",
-    url = "git@github.com:chriskempson/base16-vim"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/ariake-vim-colors",
+    url = "git@github.com:jim-at-jibba/ariake-vim-colors"
   },
   ["bufferline.nvim"] = {
     loaded = true,
@@ -125,25 +119,40 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "git@github.com:saadparwaiz1/cmp_luasnip"
   },
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
+    url = "git@github.com:tjdevries/colorbuddy.nvim"
+  },
+  edge = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/edge",
+    url = "git@github.com:sainnhe/edge"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/formatter.nvim",
     url = "git@github.com:mhartington/formatter.nvim"
   },
-  ["lightline-onedark"] = {
+  ["friendly-snippets"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lightline-onedark",
-    url = "git@github.com:hallzy/lightline-onedark"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "git@github.com:rafamadriz/friendly-snippets"
   },
-  ["lightline.vim"] = {
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "git@github.com:itchyny/lightline.vim"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "git@github.com:lewis6991/gitsigns.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "git@github.com:onsails/lspkind-nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "git@github.com:nvim-lualine/lualine.nvim"
   },
   ["material.nvim"] = {
     loaded = true,
@@ -159,6 +168,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "git@github.com:shaunsingh/nord.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "git@github.com:windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -186,14 +201,20 @@ _G.packer_plugins = {
     url = "git@github.com:nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "git@github.com:kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
+  ["one-nvim"] = {
     loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "git@github.com:navarasu/onedark.nvim"
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/one-nvim",
+    url = "git@github.com:Th3Whit3Wolf/one-nvim"
+  },
+  onebuddy = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/onebuddy",
+    url = "git@github.com:Th3Whit3Wolf/onebuddy"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -210,18 +231,18 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "git@github.com:nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "git@github.com:folke/todo-comments.nvim"
+  },
   ["typewriter-vim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/typewriter-vim",
     url = "git@github.com:logico/typewriter-vim"
   },
-  ["vim-archery"] = {
-    loaded = true,
-    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/vim-archery",
-    url = "git@github.com:badacadabra/vim-archery"
-  },
   ["which-key.nvim"] = {
-    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "git@github.com:folke/which-key.nvim"
@@ -229,14 +250,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

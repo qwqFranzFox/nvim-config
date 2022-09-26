@@ -63,6 +63,12 @@ require("formatter").setup({
     markdown = {
       require("formatter.filetypes.markdown").prettier,
     },
+    python = {
+      require("formatter.filetypes.python").autopep8,
+    },
+    json = {
+      require("formatter.filetypes.json").prettier,
+    },
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
     ["*"] = {
