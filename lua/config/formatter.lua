@@ -69,6 +69,38 @@ require("formatter").setup({
     json = {
       require("formatter.filetypes.json").prettier,
     },
+    go = {
+      require("formatter.filetypes.go").gofmt,
+    },
+    svelte = {
+      function(parser)
+        if not parser then
+          return {
+            exe = "prettier",
+            args = {
+              "--plugin-search-dir=.",
+              "--stdin-filepath",
+              util.escape_path(util.get_current_buffer_file_path()),
+            },
+            stdin = true,
+            try_node_modules = true,
+          }
+        end
+
+        return {
+          exe = "prettier",
+          args = {
+            "--plugin-search-dir=.",
+            "--stdin-filepath",
+            util.escape_path(util.get_current_buffer_file_path()),
+            "--parser",
+            parser,
+          },
+          stdin = true,
+          try_node_modules = true,
+        }
+      end,
+    },
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
     ["*"] = {

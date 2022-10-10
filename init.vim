@@ -18,9 +18,9 @@ set ruler
 " Always Status Bar
 set laststatus=2
 " Colorscheme
-colorscheme newpaper
+colorscheme onebuddy
 " Background
-set background=light
+set background=dark
 " True Colors
 set tgc
 " More settings

@@ -39,6 +39,8 @@ return require("packer").startup(function()
   use("shaunsingh/nord.nvim")
   use("marko-cerovac/material.nvim")
   use("Th3Whit3Wolf/one-nvim")
+  use("shaunsingh/solarized.nvim")
+  use("Mofiqul/dracula.nvim")
 
   -- Airline Status Line
   -- use("itchyny/lightline.vim")
@@ -93,4 +95,10 @@ return require("packer").startup(function()
 
   -- Git
   use("lewis6991/gitsigns.nvim")
+
+  -- Rust
+  use("simrat39/rust-tools.nvim")
+
+  -- Debugging
+  use("mfussenegger/nvim-dap")
 end)

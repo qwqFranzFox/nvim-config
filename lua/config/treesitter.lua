@@ -17,6 +17,7 @@ require("nvim-treesitter.configs").setup({
     "cpp",
     "c",
     "html",
+    "svelte",
   },
   -- 启用代码高亮功能
   highlight = {

@@ -76,10 +76,13 @@ local servers = {
       },
     },
   },
+  gopls = {},
+  svelte = {},
+  cmake = {},
 }
 local cpb = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 for server, config in pairs(servers) do
-  config.capabilities = cpb;
-  config.on_attach = on_attach;
+  config.capabilities = cpb
+  config.on_attach = on_attach
   require("lspconfig")[server].setup(config)
 end

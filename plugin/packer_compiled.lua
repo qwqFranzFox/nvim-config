@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "git@github.com:tjdevries/colorbuddy.nvim"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "git@github.com:Mofiqul/dracula.nvim"
+  },
   edge = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/edge",
@@ -185,6 +190,11 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "git@github.com:norcalli/nvim-colorizer.lua"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "git@github.com:mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -226,6 +236,16 @@ _G.packer_plugins = {
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "git@github.com:simrat39/rust-tools.nvim"
+  },
+  ["solarized.nvim"] = {
+    loaded = true,
+    path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/solarized.nvim",
+    url = "git@github.com:shaunsingh/solarized.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/decalvin/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -250,14 +270,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
