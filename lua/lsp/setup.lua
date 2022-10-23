@@ -80,7 +80,7 @@ local servers = {
   svelte = {},
   cmake = {},
 }
-local cpb = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local cpb = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 for server, config in pairs(servers) do
   config.capabilities = cpb
   config.on_attach = on_attach

@@ -18,7 +18,7 @@ set ruler
 " Always Status Bar
 set laststatus=2
 " Colorscheme
-colorscheme onebuddy
+colorscheme nord
 " Background
 set background=dark
 " True Colors
@@ -133,7 +133,7 @@ if exists("g:neovide")
   " Put anything you want to happen only in Neovide here
   let g:neovide_floating_blur_amount_x = 2.0
   let g:neovide_floating_blur_amount_y = 2.0
-  let g:neovide_fullscreen=v:false
+  let g:neovide_fullscreen=v:true
   let g:neovide_profiler = v:false
   let g:neovide_cursor_vfx_mode = "wireframe"
   let g:neovide_hide_mouse_when_typing = v:true

@@ -100,5 +100,5 @@ return require("packer").startup(function()
   use("simrat39/rust-tools.nvim")
 
   -- Debugging
-  use("mfussenegger/nvim-dap")
+  use({ "mfussenegger/nvim-dap", requires = { "theHamsta/nvim-dap-virtual-text", "rcarriga/nvim-dap-ui" } })
 end)
