@@ -55,7 +55,15 @@ require("formatter").setup({
       require("formatter.filetypes.cpp").clangformat,
     },
     rust = {
-      require("formatter.filetypes.rust").rustfmt,
+      function()
+        return {
+          exe = "rustfmt",
+          stdin = true,
+          args = {
+            "--edition=2021",
+          },
+        }
+      end,
     },
     sh = {
       require("formatter.filetypes.sh").shfmt,
