@@ -18,7 +18,7 @@ set ruler
 " Always Status Bar
 set laststatus=2
 " Colorscheme
-colorscheme onebuddy
+colorscheme nord
 " Background
 set background=dark
 " True Colors

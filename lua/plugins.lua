@@ -25,7 +25,7 @@ return require("packer").startup(function()
   use("onsails/lspkind-nvim")
   -- Snippets plugin
   use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
-  use("L3MON4D3/LuaSnip")
+  use({ "L3MON4D3/LuaSnip", run = "make install_jsregexp" })
   use("rafamadriz/friendly-snippets")
   -- Code Format
   use("mhartington/formatter.nvim")
@@ -52,7 +52,7 @@ return require("packer").startup(function()
   -- NvimTree
   use({
     "kyazdani42/nvim-tree.lua",
-    requires = "kyazdani42/nvim-web-devicons",
+    requires = "nvim-tree/nvim-web-devicons",
   })
 
   -- bufferline (新增)
@@ -100,5 +100,8 @@ return require("packer").startup(function()
   use("simrat39/rust-tools.nvim")
 
   -- Debugging
-  use({ "mfussenegger/nvim-dap", requires = { "theHamsta/nvim-dap-virtual-text", "rcarriga/nvim-dap-ui" } })
+  use({
+    "mfussenegger/nvim-dap",
+    requires = { "theHamsta/nvim-dap-virtual-text", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
+  })
 end)
