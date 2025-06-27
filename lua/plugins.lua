@@ -47,7 +47,7 @@ return require("packer").startup(function()
   -- use("daviesjamie/vim-base16-lightline")
   use({
     "nvim-lualine/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    requires = { "nvim-tree/nvim-web-devicons" },
   })
   -- NvimTree
   use({
@@ -56,7 +56,7 @@ return require("packer").startup(function()
   })
 
   -- bufferline (新增)
-  use({ "akinsho/bufferline.nvim", requires = "kyazdani42/nvim-web-devicons" })
+  use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
 
   -- treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
@@ -91,17 +91,5 @@ return require("packer").startup(function()
         -- refer to the configuration section below
       })
     end,
-  })
-
-  -- Git
-  use("lewis6991/gitsigns.nvim")
-
-  -- Rust
-  use("simrat39/rust-tools.nvim")
-
-  -- Debugging
-  use({
-    "mfussenegger/nvim-dap",
-    requires = { "theHamsta/nvim-dap-virtual-text", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio" },
   })
 end)

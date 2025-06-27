@@ -34,26 +34,12 @@ local cpb = vim.lsp.protocol.make_client_capabilities()
 cpb.textDocument.completion.completionItem.snippetSupport = true
 
 local servers = {
-  yamlls = {
-    -- other configuration for setup {}
-    settings = {
-      yaml = {
-        -- other settings. note this overrides the lspconfig defaults.
-        schemas = {
-          ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-          ["../path/relative/to/file.yml"] = "/.github/workflows/*",
-          ["/path/from/root/of/project"] = "/.github/workflows/*",
-        },
-      },
-    },
-  },
+  yamlls = {},
   clangd = {},
   pyright = {},
   rust_analyzer = {},
-  tsserver = {},
+  ts_ls = {},
   lua_ls = {},
-  gopls = {},
-  svelte = {},
   cmake = {},
 }
 local cpb = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())

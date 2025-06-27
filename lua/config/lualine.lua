@@ -26,7 +26,7 @@ lualine.setup({
       lualine_c = { "filename" },
       lualine_x = { "encoding", "fileformat", "filetype" },
       lualine_y = { "progress" },
-      lualine_z = { "location", os.date("%H:%M") },
+      lualine_z = { "location", os.date("%a") },
     },
     inactive_sections = {
       lualine_a = {},
