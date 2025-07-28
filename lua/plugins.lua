@@ -42,9 +42,7 @@ return require("packer").startup(function()
   use("shaunsingh/solarized.nvim")
   use("Mofiqul/dracula.nvim")
 
-  -- Airline Status Line
-  -- use("itchyny/lightline.vim")
-  -- use("daviesjamie/vim-base16-lightline")
+  -- Lualine Status Line
   use({
     "nvim-lualine/lualine.nvim",
     requires = { "nvim-tree/nvim-web-devicons" },
@@ -55,7 +53,7 @@ return require("packer").startup(function()
     requires = "nvim-tree/nvim-web-devicons",
   })
 
-  -- bufferline (新增)
+  -- bufferline
   use({ "akinsho/bufferline.nvim", requires = "nvim-tree/nvim-web-devicons" })
 
   -- treesitter

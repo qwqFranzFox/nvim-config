@@ -1,6 +1,10 @@
 -- Interface
 local set = vim.opt
 local function nnoremap(key, command, props)
+  if props == nil then
+    props = {}
+  end
+  props.noremap = true
   vim.keymap.set("n", key, command, props)
 end
 
@@ -77,7 +81,7 @@ set.shiftwidth = 2
 
 -- Keybindings
 
--- Leader ::Key
+-- Leader Key
 vim.g.mapleader = " "
 -- Ctrl-E will Spilt Window to Open Config File
 nnoremap("<leader>e", ":edit ~/.config/nvim<cr>", { silent = true })
@@ -124,6 +128,7 @@ if vim.g.neovide then
   vim.g.neovide_profiler = false
   vim.g.neovide_cursor_vfx_mode = "wireframe"
   vim.g.neovide_hide_mouse_when_typing = true
+  vim.o.guifont="Sarasa Mono SC,Iosevka"
 end
 -- Which-key.nvim
 set.timeoutlen = 200
