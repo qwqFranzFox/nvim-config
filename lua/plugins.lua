@@ -30,18 +30,6 @@ return require("packer").startup(function()
   -- Code Format
   use("mhartington/formatter.nvim")
 
-  -- Color Scheme
-  use("jim-at-jibba/ariake-vim-colors")
-  use("sainnhe/edge")
-  use({ "Th3Whit3Wolf/onebuddy", requires = "tjdevries/colorbuddy.nvim" })
-  use("logico/typewriter-vim")
-  use("yorik1984/newpaper.nvim")
-  use("shaunsingh/nord.nvim")
-  use("marko-cerovac/material.nvim")
-  use("Th3Whit3Wolf/one-nvim")
-  use("shaunsingh/solarized.nvim")
-  use("Mofiqul/dracula.nvim")
-
   -- Lualine Status Line
   use({
     "nvim-lualine/lualine.nvim",
@@ -58,48 +46,4 @@ return require("packer").startup(function()
 
   -- treesitter
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-
-  -- colorizer
-  use({ "norcalli/nvim-colorizer.lua" })
-
-  -- Shortcuts linting
-  use({
-    "folke/which-key.nvim",
-  })
-
-  -- Comment
-  use("numToStr/Comment.nvim")
-
-  -- Auto Pairs
-  use({
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup({})
-    end,
-  })
-
-  -- Todo Highlight
-  use({
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
-    end,
-  })
-
-  use({ "nyoom-engineering/oxocarbon.nvim" })
-
-  use({
-    "nvimdev/lspsaga.nvim",
-    after = "nvim-lspconfig",
-    config = function()
-      require("lspsaga").setup({})
-    end,
-  })
-
-  use("EdenEast/nightfox.nvim")
 end)
