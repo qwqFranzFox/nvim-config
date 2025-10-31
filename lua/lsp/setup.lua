@@ -31,11 +31,13 @@ local on_attach = function(client, bufnr)
   vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, bufopts)
 end
 local cpb = vim.lsp.protocol.make_client_capabilities()
-cpb.textDocument.completion.completionItem.snippetSupport = true
+cpb.textDocument.completion.completionItem.snippetSupport = false
 
 local servers = {
   yamlls = {},
-  clangd = {},
+  clangd = {
+    filetypes = { "c", "cpp" },
+  },
   pyright = {},
   rust_analyzer = {},
   ts_ls = {},
@@ -46,5 +48,6 @@ local cpb = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_c
 for server, config in pairs(servers) do
   config.capabilities = cpb
   config.on_attach = on_attach
-  require("lspconfig")[server].setup(config)
+  vim.lsp.config(server, config)
+  vim.lsp.enable(server)
 end

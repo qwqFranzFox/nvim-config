@@ -90,4 +90,16 @@ return require("packer").startup(function()
       })
     end,
   })
+
+  use({ "nyoom-engineering/oxocarbon.nvim" })
+
+  use({
+    "nvimdev/lspsaga.nvim",
+    after = "nvim-lspconfig",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+  })
+
+  use("EdenEast/nightfox.nvim")
 end)

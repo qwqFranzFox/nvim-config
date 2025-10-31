@@ -88,13 +88,12 @@ nnoremap("<leader>e", ":edit ~/.config/nvim<cr>", { silent = true })
 -- Ctrl-H will Show Help
 -- nnoremap <c-h> :help
 -- Ctrl-Z
-nnoremap("<C-z>", ":earlier<cr>", { silent = true })
+-- nnoremap("<C-z>", ":earlier<cr>", { silent = true })
 -- Ctrl-Y
 nnoremap("<C-y>", ":later<cr>", { silent = true })
 -- Format
 nnoremap("<leader><leader>", ":Format<cr>", { silent = true })
 -- Compile
-nnoremap("<leader>r", ":!clang++ % -o %< --std=c++14 -g -Wall -Wextra<CR>")
 -- Terminal
 nnoremap("<leader>t", ":!cf test %<CR>")
 nnoremap("<leader>T", ":split term://$SHELL<CR>")
@@ -128,7 +127,16 @@ if vim.g.neovide then
   vim.g.neovide_profiler = false
   vim.g.neovide_cursor_vfx_mode = "wireframe"
   vim.g.neovide_hide_mouse_when_typing = true
-  vim.o.guifont="Sarasa Mono SC,Iosevka"
+  vim.o.guifont = "Sarasa Mono SC,IosevkaTerm Nerd Font Mono"
 end
 -- Which-key.nvim
 set.timeoutlen = 200
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.c" },
+  command = "nmap <buffer> <leader>r :!clang -lm --std=c11 % -o %< -Wall -Wextra -g -Og<CR>",
+})
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.cpp", "*.cxx" },
+  command = "nmap <buffer> <leader>r :!clang++ % -o %< --std=c++14 -g -Wall -Wextra -g -Og<CR>",
+})
