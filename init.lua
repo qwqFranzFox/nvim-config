@@ -24,7 +24,7 @@ set.ruler = true
 -- Always Status Bar
 set.laststatus = 2
 -- Colorscheme
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme nightfox")
 -- Background
 set.background = "dark"
 -- True Colors
