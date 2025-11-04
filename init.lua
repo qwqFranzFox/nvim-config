@@ -106,7 +106,6 @@ nnoremap("<leader>b<Right> ", ":bn<CR>", { silent = true })
 
 -- Plugins
 require("basic")
-require("plugins")
 nnoremap("<leader>p", ":vsplit ~/.config/nvim/lua/plugins.lua<CR>", { silent = true })
 
 -- Telescope.vim

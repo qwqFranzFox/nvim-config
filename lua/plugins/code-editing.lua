@@ -1,15 +1,17 @@
 return {
-
-  { "norcalli/nvim-colorizer.lua" },
-
-  -- Shortcuts linting
   {
-    "folke/which-key.nvim",
+    "mhartington/formatter.nvim",
     lazy = true,
-    cmd = "WhichKey",
-    config = function() end,
+    cmd = {
+      "Format",
+      "FormatLock",
+      "FormatWrite",
+      "FormatWriteLock",
+      config = function()
+        require("config.formatter")
+      end,
+    },
   },
-
   -- Comment
   {
     "numToStr/Comment.nvim",
@@ -59,40 +61,5 @@ return {
         post_hook = nil,
       })
     end,
-  },
-
-  -- Auto Pairs
-  {
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup({})
-    end,
-  },
-
-  -- Todo Highlight
-  {
-    "folke/todo-comments.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
-    end,
-  },
-
-  {
-    "mhartington/formatter.nvim",
-    lazy = true,
-    cmd = {
-      "Format",
-      "FormatLock",
-      "FormatWrite",
-      "FormatWriteLock",
-      config = function()
-        require("config.formatter")
-      end,
-    },
   },
 }
