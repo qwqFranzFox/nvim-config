@@ -23,8 +23,6 @@ set.mouse = "a"
 set.ruler = true
 -- Always Status Bar
 set.laststatus = 2
--- Colorscheme
-vim.cmd("colorscheme nightfox")
 -- Background
 set.background = "dark"
 -- True Colors
@@ -106,6 +104,10 @@ nnoremap("<leader>b<Right> ", ":bn<CR>", { silent = true })
 
 -- Plugins
 require("basic")
+
+-- Colorscheme
+vim.cmd("colorscheme nightfox")
+
 nnoremap("<leader>p", ":vsplit ~/.config/nvim/lua/plugins.lua<CR>", { silent = true })
 
 -- Telescope.vim
