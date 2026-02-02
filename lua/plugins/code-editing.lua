@@ -1,5 +1,24 @@
 return {
   {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    dependencies = { "davidmh/cspell.nvim" },
+    opts = function(_, opts)
+      local cspell = require("cspell")
+      opts.sources = opts.sources or {}
+      table.insert(
+        opts.sources,
+        cspell.diagnostics.with({
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity.HINT
+          end,
+        })
+      )
+      table.insert(opts.sources, cspell.code_actions)
+    end,
+  },
+  { "j-hui/fidget.nvim", opts = {} },
+  {
     "mhartington/formatter.nvim",
     lazy = true,
     cmd = {
@@ -25,7 +44,7 @@ return {
           lua = {
             -- "formatter.filetypes.lua" defines default configurations for the
             -- "lua" filetype
-            require("formatter.filetypes.lua").stylua,
+            -- require("formatter.filetypes.lua").stylua,
 
             -- You can also define your own configuration
             function()
@@ -39,11 +58,11 @@ return {
               return {
                 exe = "stylua",
                 args = {
-                  "--search-parent-directories",
                   "--indent-width",
                   "2",
                   "--indent-type",
                   "Spaces",
+                  "--search-parent-directories",
                   "--stdin-filepath",
                   util.escape_path(util.get_current_buffer_file_path()),
                   "--",
@@ -111,6 +130,9 @@ return {
                 try_node_modules = true,
               }
             end,
+          },
+          typst = {
+            { exe = "typstyle", stdin = true, args = { "-q", "--wrap-text" } },
           },
           -- Use the special "*" filetype for defining formatter configurations on
           -- any filetype

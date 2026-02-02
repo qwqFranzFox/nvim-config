@@ -34,15 +34,15 @@ local cpb = vim.lsp.protocol.make_client_capabilities()
 cpb.textDocument.completion.completionItem.snippetSupport = false
 
 local servers = {
+  cmake = {},
   yamlls = {},
-  clangd = {
-    filetypes = { "c", "cpp" },
-  },
+  clangd = {},
   pyright = {},
   rust_analyzer = {},
   ts_ls = {},
   lua_ls = {},
-  cmake = {},
+  tinymist = {},
+  nil_ls = {},
 }
 local cpb = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 for server, config in pairs(servers) do

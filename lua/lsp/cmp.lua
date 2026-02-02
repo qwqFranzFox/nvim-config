@@ -10,9 +10,9 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({
-    ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<leader>d"] = cmp.mapping.open_docs(),
+    ["<leader><UP>"] = cmp.mapping.scroll_docs(-4),
+    ["<leader><DOWN>"] = cmp.mapping.scroll_docs(-4),
     ["<CR>"] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -22,10 +22,9 @@ cmp.setup({
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
       else
         fallback()
+        -- cmp.complete()
       end
     end, { "i", "s" }),
 
