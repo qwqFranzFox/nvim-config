@@ -9,12 +9,10 @@ return {
     }
   },
 
-  -- Shortcuts linting
+  -- Keymap linting
   { "folke/which-key.nvim", },
-
   -- Auto Pairs
-  { "windwp/nvim-autopairs", },
-
+  { "windwp/nvim-autopairs", opts = {} },
   -- Todo Highlight
   {
     "folke/todo-comments.nvim",
